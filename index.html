@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>臺中府後導覽圖</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f6f2eb;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map {
+      position: relative;
+      width: min(100vw, calc(100vh * 1250 / 2048));
+      aspect-ratio: 1250 / 2048;
+      flex: 0 0 auto;
+    }
+
+    .map img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .hotspot {
+      position: absolute;
+      display: block;
+      z-index: 2;
+      background: transparent;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* 位置皆使用百分比，圖片縮放時點擊區域會同步縮放，不會跑版 */
+    .literature      { left: 2.0%;  top: 20.8%; width: 27.0%; height: 10.5%; }
+    .fifth-market    { left: 12.5%; top: 34.3%; width: 28.5%; height: 12.5%; }
+    .west-household  { left: 2.0%;  top: 49.2%; width: 30.5%; height: 17.0%; }
+    .zhongshan-land  { left: 33.0%; top: 52.3%; width: 25.0%; height: 11.5%; }
+    .district-court  { left: 62.0%; top: 67.7%; width: 25.5%; height: 13.8%; }
+    .comic-museum    { left: 56.5%; top: 84.0%; width: 30.5%; height: 12.3%; }
+    .transportation  { left: 52.0%; top: 22.5%; width: 29.0%; height: 10.8%; }
+  </style>
+</head>
+<body>
+  <main class="map" aria-label="臺中府後街周邊導覽圖">
+    <img src="guide.jpg" alt="臺中府後街地下停車場周邊導覽圖" />
+
+    <a class="hotspot literature" href="https://maps.app.goo.gl/3Y6i8oeR1jv5wjZx5" aria-label="台中文學館"></a>
+    <a class="hotspot fifth-market" href="https://maps.app.goo.gl/TKagmxT5NJGywYcKA" aria-label="台中第五市場"></a>
+    <a class="hotspot west-household" href="https://maps.app.goo.gl/E26s5MKSCZDuWGWb8" aria-label="西區戶政事務所"></a>
+    <a class="hotspot zhongshan-land" href="https://maps.app.goo.gl/pjkH69fsgdkqUiMi9" aria-label="中山地政事務所"></a>
+    <a class="hotspot district-court" href="https://maps.app.goo.gl/d9XAtFrmDmCWwxY99" aria-label="台中地方法院"></a>
+    <a class="hotspot comic-museum" href="https://maps.app.goo.gl/2gGqGdt4ay1NUSP28" aria-label="國家漫畫博物館"></a>
+    <a class="hotspot transportation" href="https://maps.app.goo.gl/8EyU9B68zvf3TQna8" aria-label="台中市政府交通局"></a>
+  </main>
+</body>
+</html>
